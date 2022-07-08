@@ -39,6 +39,9 @@ body{
     border-radius: 5px;
     padding: 10px 40px;
     cursor: pointer;
+    position: absolute;
+    left: 40%;
+    top: 20%;
 }
 #iniciar:hover{
     background-color: rgb(44, 44, 185);

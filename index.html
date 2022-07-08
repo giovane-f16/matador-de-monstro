@@ -24,12 +24,12 @@
             </div>
         </div>
         <div id="botoes">
-            <button id="iniciar">INICIAR NOVO JOGO</button>
-            <div id="botoesEscondidos">
+            <button id="iniciar" @click="botoes = !botoes" v-show="!botoes">INICIAR NOVO JOGO</button>
+            <div id="botoesEscondidos" v-show="botoes">
                 <button id="atacar">ATAQUE</button>
                 <button id="ataqueEspecial">ATAQUE ESPECIAL</button>
                 <button id="curar">CURAR</button>
-                <button id="desistir">DESISTIR</button>
+                <button id="desistir" @click="botoes = !botoes">DESISTIR</button>
             </div>
         </div>
     </div>
