@@ -20,8 +20,8 @@ new Vue({
             this.vidaMonstro = this.vidaMonstro - danoM
         },
         curar(){
-            curaJ = Math.ceil(Math.random() * 10)
-            danoM = Math.ceil(Math.random() * 9)
+            curaJ = Math.ceil(Math.random() * 9)
+            danoM = Math.ceil(Math.random() * 8)
             this.vidaJogador =  this.vidaJogador + (curaJ - danoM)
         }
     }
