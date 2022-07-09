@@ -14,7 +14,7 @@
         <div id="tela">
             <div id="jogador">
                 <span>Jogador</span>
-                <div id="barra-progresso-j"><div id="barra-j"></div></div>
+                <div id="barra-progresso-j"><div id="barra-j" :style="{width}"></div></div>
                 {{ vidaJogador }}%
             </div>
             <div id="monstro">
@@ -27,8 +27,8 @@
             <button id="iniciar" @click="botoes = !botoes" v-show="!botoes">INICIAR NOVO JOGO</button>
             <div id="botoesEscondidos" v-show="botoes">
                 <button id="atacar" @click="ataque()">ATAQUE</button>
-                <button id="ataqueEspecial">ATAQUE ESPECIAL</button>
-                <button id="curar">CURAR</button>
+                <button id="ataqueEspecial" @click="ataqueEspecial()">ATAQUE ESPECIAL</button>
+                <button id="curar" @click="curar()">CURAR</button>
                 <button id="desistir" @click="botoes = !botoes">DESISTIR</button>
             </div>
         </div>
