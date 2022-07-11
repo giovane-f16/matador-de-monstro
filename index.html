@@ -22,6 +22,10 @@
                 {{ vidaMonstro }}%
             </div>
         </div>
+        <div id="status">
+            Você ganhou!! :)
+            Você perdeu :(
+        </div>
         <div id="botoes">
             <button id="iniciar" @click="botoes = !botoes" v-show="!botoes">INICIAR NOVO JOGO</button>
             <div id="botoesEscondidos" v-show="botoes">
@@ -30,6 +34,9 @@
                 <button id="curar" @click="curar">CURAR</button>
                 <button id="desistir" @click="botoes = !botoes">DESISTIR</button>
             </div>
+        </div>
+        <div id="lista"> 
+            lista dos logs
         </div>
     </div>
 </body>
