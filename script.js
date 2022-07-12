@@ -6,7 +6,7 @@ new Vue({
         vidaMonstro: 100,
         width: '500px',
         ganhou: true,
-        finalizou: true,
+        finalizou: false,
         green: '#008a00',
         red: '#ff0000'
     }, 
@@ -16,20 +16,17 @@ new Vue({
             danoM = Math.ceil(Math.random() * 7)
             this.vidaJogador =  this.vidaJogador - danoJ
             this.vidaMonstro = this.vidaMonstro - danoM
-            console.log("ATACK: " + danoJ)
         },
         ataqueEspecial(){
             danoJ = Math.ceil(Math.random() * 9)
             danoM = Math.ceil(Math.random() * 10)
             this.vidaJogador =  this.vidaJogador - danoJ
             this.vidaMonstro = this.vidaMonstro - danoM
-            console.log("ATACK ESPECIAL " + danoJ)
         },
         curar(){
             curaJ = Math.ceil(Math.random() * 9)
             danoM = Math.ceil(Math.random() * 8)
             this.vidaJogador =  this.vidaJogador + (curaJ - danoM)
-            console.log("CURA: " + (curaJ+danoM))
         }
     }
 })
