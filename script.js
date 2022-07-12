@@ -4,7 +4,10 @@ new Vue({
         botoes: false,
         vidaJogador: 100,
         vidaMonstro: 100,
-        width: '500px'
+        width: '500px',
+        ganhou: true,
+        green: '#008a00',
+        red: '#ff0000'
     }, 
     methods: {
         ataque(){
