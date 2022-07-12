@@ -16,12 +16,12 @@
         <div id="tela" class="panel">
             <div id="jogador">
                 <span>Jogador</span>
-                <div id="barra-progresso-j"><div id="barra-j" :style="{width}"></div></div>
+                <div id="barra-progresso-j"><div class="barra-j" :class="{danger: vidaJogador < 20}" :style="{width: vidaJogador + '%'}"></div></div>
                 {{ vidaJogador }}%
             </div>
             <div id="monstro">
                 <span>Monstro</span>
-                <div id="barra-progresso-m"><div id="barra-m"></div></div>
+                <div id="barra-progresso-m"><div class="barra-m" :class="{danger: vidaMonstro < 20}" :style="{width: vidaMonstro + '%'}"></div></div>
                 {{ vidaMonstro }}%
             </div>
         </div>

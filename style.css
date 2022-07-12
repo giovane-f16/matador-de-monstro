@@ -23,9 +23,12 @@ body{
     width: 500px;
     margin-top: 10px;
 }
-#barra-j, #barra-m{
+.barra-j, .barra-m{
     height: 100%;
     background-color: rgb(3, 184, 3);
+}
+.danger{
+    background-color: #ff0000;
 }
 #jogador span, #monstro span{
     font-size: 32px;

@@ -4,7 +4,6 @@ new Vue({
         botoes: false,
         vidaJogador: 100,
         vidaMonstro: 100,
-        width: '500px',
         ganhou: true,
         finalizou: true,
         green: '#008a00',
