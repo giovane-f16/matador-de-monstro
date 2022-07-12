@@ -22,9 +22,9 @@
                 {{ vidaMonstro }}%
             </div>
         </div>
-        <div id="resultado">
-            <span v-show="ganhou" :style="{color: green}">Você ganhou!! :)</span>
-            <span v-show="!ganhou" :style="{color: red}">Você perdeu :(</span> 
+        <div id="resultado" v-if="finalizou">
+            <span v-if="ganhou" :style="{color: green}">Você ganhou!! :)</span>
+            <span v-else :style="{color: red}">Você perdeu :(</span> 
         </div>
         <div id="botoes">
             <button id="iniciar" @click="botoes = !botoes" v-show="!botoes">INICIAR NOVO JOGO</button>
