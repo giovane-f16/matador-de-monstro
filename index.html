@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue@2"></script>
-    <title>Matador de monstros</title>
+    <title>Matador de monstro</title>
 </head>
 <body>
     <div id="app">
@@ -23,7 +26,7 @@
             </div>
         </div>
         <div id="resultado" class="panel" v-if="finalizou">
-            <span v-if="ganhou" :style="{color: green}">Você ganhou!! :)</span>
+            <span v-if="ganhou" :style="{color: green}">Você ganhou! :)</span>
             <span v-else :style="{color: red}">Você perdeu :(</span> 
         </div>
         <div id="botoes" class="panel">

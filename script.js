@@ -6,7 +6,7 @@ new Vue({
         vidaMonstro: 100,
         width: '500px',
         ganhou: true,
-        finalizou: false,
+        finalizou: true,
         green: '#008a00',
         red: '#ff0000'
     }, 
