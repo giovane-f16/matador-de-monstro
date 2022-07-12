@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <div id="tela">
+        <div id="tela" class="panel">
             <div id="jogador">
                 <span>Jogador</span>
                 <div id="barra-progresso-j"><div id="barra-j" :style="{width}"></div></div>
@@ -22,11 +22,11 @@
                 {{ vidaMonstro }}%
             </div>
         </div>
-        <div id="resultado" v-if="finalizou">
+        <div id="resultado" class="panel" v-if="finalizou">
             <span v-if="ganhou" :style="{color: green}">Você ganhou!! :)</span>
             <span v-else :style="{color: red}">Você perdeu :(</span> 
         </div>
-        <div id="botoes">
+        <div id="botoes" class="panel">
             <button id="iniciar" @click="botoes = !botoes" v-show="!botoes">INICIAR NOVO JOGO</button>
             <div id="botoesEscondidos" v-show="botoes">
                 <button id="atacar" @click="ataque">ATAQUE</button>
@@ -35,7 +35,7 @@
                 <button id="desistir" @click="botoes = !botoes">DESISTIR</button>
             </div>
         </div>
-        <div id="lista"> 
+        <div id="lista" class="panel"> 
             lista dos logs
         </div>
     </div>

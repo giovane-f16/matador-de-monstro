@@ -3,10 +3,12 @@ body{
     text-align: center;
     font-size: 18px;
 }
-#tela{
+.panel{
+    border: 1px solid rgba(104, 103, 103, 0.5);
     margin: 10px;
     padding: 30px;
-    border: 1px solid rgba(104, 103, 103, 0.5);
+}
+#tela{
     display: flex;
     justify-content: space-around;
 }
@@ -22,11 +24,6 @@ body{
 }
 #jogador span, #monstro span{
     font-size: 32px;
-}
-#botoes{
-    border: 1px solid rgba(104, 103, 103, 0.5);
-    margin: 10px;
-    padding: 30px;
 }
 #botoes div{
     align-items: center;
@@ -83,9 +80,6 @@ body{
     background-color: rgb(155, 155, 155);
 }
 #resultado{
-    border: 1px solid rgba(104, 103, 103, 0.5);
-    margin: 10px;
-    padding: 30px;
     font-size: 32px;
     line-height: bold
 }
