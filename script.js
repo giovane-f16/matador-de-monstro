@@ -5,7 +5,6 @@ new Vue({
         vidaJogador: 100,
         vidaMonstro: 100,
         ganhou: true,
-        finalizou: false,
         green: '#008a00',
         red: '#ff0000'
     }, 
@@ -26,6 +25,11 @@ new Vue({
             curaJ = Math.ceil(Math.random() * 9)
             danoM = Math.ceil(Math.random() * 8)
             this.vidaJogador =  this.vidaJogador + (curaJ - danoM)
+        }
+    },
+    computed: {
+        finalizou: function(){
+            return this.vidaJogador <= 0 || this.vidaMonstro <= 0
         }
     }
 })
