@@ -1,11 +1,11 @@
 new Vue({
     el: '#app',
     data: {
-        botoes: false,
+        iniciar: false,
         vidaJogador: 100,
         vidaMonstro: 100,
         ganhou: true,
-        finalizou: true,
+        finalizou: false,
         green: '#008a00',
         red: '#ff0000'
     }, 
