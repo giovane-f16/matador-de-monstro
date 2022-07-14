@@ -31,5 +31,11 @@ new Vue({
         finalizou: function(){
             return this.vidaJogador <= 0 || this.vidaMonstro <= 0
         }
+    },
+    watch: {
+        vidaJogador: function(novo, antigo){
+            console.log(`Novo valor ${novo}`)
+            console.log(`Antigo: ${antigo}`)
+        }
     }
 })
