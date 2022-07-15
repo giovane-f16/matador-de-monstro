@@ -32,8 +32,8 @@
         <div id="botoes" class="panel">
             <button id="iniciar" @click="comecarJogo" v-show="!iniciar">INICIAR NOVO JOGO</button>
             <div id="botoesEscondidos" v-show="iniciar">
-                <button id="atacar" @click="ataque">ATAQUE</button>
-                <button id="ataqueEspecial" @click="ataqueEspecial">ATAQUE ESPECIAL</button>
+                <button id="atacar" @click="ataqueTeste(false)">ATAQUE</button>
+                <button id="ataqueEspecial" @click="ataqueTeste(true)">ATAQUE ESPECIAL</button>
                 <button id="curar" @click="curar">CURAR</button>
                 <button id="desistir" @click="iniciar = false">DESISTIR</button>
             </div>

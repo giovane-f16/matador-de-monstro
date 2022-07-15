@@ -14,6 +14,18 @@ new Vue({
             this.vidaJogador = 100
             this.vidaMonstro = 100
         },
+        numAleatorio(min, max){
+            const valor = Math.ceil(Math.random() * (max - min) + min)
+            return valor
+        },
+        dano(min, max, especial){
+            const plus = especial ? 5 : 0
+            const dano = this.numAleatorio(min + plus, max + plus)
+            this.vidaJogador = Math.max(this.vidaJogador - dano, 0) // Garantindo que não será negativo
+        },
+        ataqueTeste(especial){
+            this.dano(7, 12, false)
+        },
         ataque(){
             danoJ = Math.ceil(Math.random() * 10)
             danoM = Math.ceil(Math.random() * 7)
