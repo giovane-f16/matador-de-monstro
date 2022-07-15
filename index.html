@@ -30,12 +30,12 @@
             <span v-else :style="{color: red}">Você perdeu :(</span> 
         </div>
         <div id="botoes" class="panel">
-            <button id="iniciar" @click="iniciar = !iniciar" v-show="!iniciar">INICIAR NOVO JOGO</button>
+            <button id="iniciar" @click="comecarJogo" v-show="!iniciar">INICIAR NOVO JOGO</button>
             <div id="botoesEscondidos" v-show="iniciar">
                 <button id="atacar" @click="ataque">ATAQUE</button>
                 <button id="ataqueEspecial" @click="ataqueEspecial">ATAQUE ESPECIAL</button>
                 <button id="curar" @click="curar">CURAR</button>
-                <button id="desistir" @click="iniciar = !iniciar">DESISTIR</button>
+                <button id="desistir" @click="iniciar = false">DESISTIR</button>
             </div>
         </div>
         <div id="lista" class="panel"> 

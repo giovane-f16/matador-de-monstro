@@ -9,6 +9,11 @@ new Vue({
         red: '#ff0000'
     }, 
     methods: {
+        comecarJogo(){
+            this.iniciar = true
+            this.vidaJogador = 100
+            this.vidaMonstro = 100
+        },
         ataque(){
             danoJ = Math.ceil(Math.random() * 10)
             danoM = Math.ceil(Math.random() * 7)
