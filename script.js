@@ -4,7 +4,6 @@ new Vue({
         iniciar: false,
         vidaJogador: 100,
         vidaMonstro: 100,
-        ganhou: true,
         green: '#008a00',
         red: '#ff0000'
     }, 
@@ -15,17 +14,17 @@ new Vue({
             this.vidaMonstro = 100
         },
         numAleatorio(min, max){
-            const valor = Math.ceil(Math.random() * (max - min) + min)
-            return valor
+            const valor = Math.random() * (max - min) + min
+            return Math.round(valor)
         },
         dano(player, min, max, especial){
             const plus = especial ? 5 : 0
             const dano = this.numAleatorio(min + plus, max + plus)
-            this[player] = Math.max(this.vidaJogador - dano, 0)
+            this[player] = Math.max(this[player] - dano, 0)
         },
         ataque(especial){
             this.dano('vidaJogador', 7, 12, false)
-            this.dano('vidaMonstro', 5, 10, true)
+            this.dano('vidaMonstro', 5, 10, especial)
         },
         curar(){
             curaJ = Math.ceil(Math.random() * 9)
