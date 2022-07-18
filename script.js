@@ -15,7 +15,7 @@ new Vue({
         },
         numAleatorio(min, max){
             const valor = Math.random() * (max - min) + min
-            return Math.round(valor)
+            return Math.ceil(valor)
         },
         dano(player, min, max, especial){
             const plus = especial ? 5 : 0
@@ -27,9 +27,12 @@ new Vue({
             this.dano('vidaMonstro', 5, 10, especial)
         },
         curar(){
-            curaJ = Math.ceil(Math.random() * 9)
-            danoM = Math.ceil(Math.random() * 8)
-            this.vidaJogador =  this.vidaJogador + (curaJ - danoM)
+            this.cura(9, 13)
+            this.dano('vidaJogador', 7, 12, false)
+        },
+        cura(min, max){
+            const heal = this.numAleatorio(min, max)
+            this.vidaJogador = Math.min(this.vidaJogador + heal, 100)
         }
     },
     computed: {
