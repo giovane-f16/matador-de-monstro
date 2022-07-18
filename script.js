@@ -18,25 +18,14 @@ new Vue({
             const valor = Math.ceil(Math.random() * (max - min) + min)
             return valor
         },
-        dano(min, max, especial){
+        dano(player, min, max, especial){
             const plus = especial ? 5 : 0
             const dano = this.numAleatorio(min + plus, max + plus)
-            this.vidaJogador = Math.max(this.vidaJogador - dano, 0) // Garantindo que não será negativo
+            this[player] = Math.max(this.vidaJogador - dano, 0)
         },
-        ataqueTeste(especial){
-            this.dano(7, 12, false)
-        },
-        ataque(){
-            danoJ = Math.ceil(Math.random() * 10)
-            danoM = Math.ceil(Math.random() * 7)
-            this.vidaJogador =  this.vidaJogador - danoJ
-            this.vidaMonstro = this.vidaMonstro - danoM
-        },
-        ataqueEspecial(){
-            danoJ = Math.ceil(Math.random() * 9)
-            danoM = Math.ceil(Math.random() * 10)
-            this.vidaJogador =  this.vidaJogador - danoJ
-            this.vidaMonstro = this.vidaMonstro - danoM
+        ataque(especial){
+            this.dano('vidaJogador', 7, 12, false)
+            this.dano('vidaMonstro', 5, 10, true)
         },
         curar(){
             curaJ = Math.ceil(Math.random() * 9)
@@ -45,14 +34,13 @@ new Vue({
         }
     },
     computed: {
-        finalizou: function(){
-            return this.vidaJogador <= 0 || this.vidaMonstro <= 0
+        finalizou(){
+            return this.vidaJogador == 0 || this.vidaMonstro == 0
         }
     },
     watch: {
-        vidaJogador: function(novo, antigo){
-            console.log(`Novo valor ${novo}`)
-            console.log(`Antigo: ${antigo}`)
+        finalizou(value){
+            if (value) this.iniciar = false
         }
     }
 })

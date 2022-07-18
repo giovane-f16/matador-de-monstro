@@ -26,14 +26,14 @@
             </div>
         </div>
         <div id="resultado" class="panel" v-if="finalizou">
-            <span v-if="vidaMonstro <= 0" :style="{color: green}">Você ganhou! :)</span>
+            <span v-if="vidaMonstro == 0" :style="{color: green}">Você ganhou! :)</span>
             <span v-else :style="{color: red}">Você perdeu :(</span> 
         </div>
         <div id="botoes" class="panel">
             <button id="iniciar" @click="comecarJogo" v-show="!iniciar">INICIAR NOVO JOGO</button>
             <div id="botoesEscondidos" v-show="iniciar">
-                <button id="atacar" @click="ataqueTeste(false)">ATAQUE</button>
-                <button id="ataqueEspecial" @click="ataqueTeste(true)">ATAQUE ESPECIAL</button>
+                <button id="atacar" @click="ataque(false)">ATAQUE</button>
+                <button id="ataqueEspecial" @click="ataque(true)">ATAQUE ESPECIAL</button>
                 <button id="curar" @click="curar">CURAR</button>
                 <button id="desistir" @click="iniciar = false">DESISTIR</button>
             </div>
