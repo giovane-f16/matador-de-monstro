@@ -91,3 +91,21 @@ body{
     font-size: 32px;
     line-height: bold
 }
+#lista ul{
+    list-style: none;
+}
+#lista ul li{
+    margin: 10px 0px;
+    padding: 3px 0px;
+    line-height: bold;
+    font-size: 24px;
+    border-radius: 3px;
+}
+.player{
+    background-color: #5454c0;
+    color: #fff;
+}
+.monster{
+    background-color: #d62b2b;
+    color: #fff;
+}

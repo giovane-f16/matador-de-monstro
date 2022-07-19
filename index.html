@@ -39,7 +39,9 @@
             </div>
         </div>
         <div id="lista" class="panel" v-if="logs.length"> 
-            lista dos logs
+            <ul>
+                <li v-for="log in logs" :class="log.classe" class="log">{{ log.texto }}</li>
+            </ul>
         </div>
     </div>
 </body>
