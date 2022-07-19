@@ -38,7 +38,7 @@
                 <button id="desistir" @click="iniciar = false">DESISTIR</button>
             </div>
         </div>
-        <div id="lista" class="panel"> 
+        <div id="lista" class="panel" v-if="logs.length"> 
             lista dos logs
         </div>
     </div>

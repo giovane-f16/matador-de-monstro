@@ -5,7 +5,8 @@ new Vue({
         vidaJogador: 100,
         vidaMonstro: 100,
         green: '#008a00',
-        red: '#ff0000'
+        red: '#ff0000',
+        logs: []
     }, 
     methods: {
         comecarJogo(){
@@ -17,14 +18,17 @@ new Vue({
             const valor = Math.random() * (max - min) + min
             return Math.ceil(valor)
         },
-        dano(player, min, max, especial){
+        dano(player, min, max, especial, origem, alvo, classe){
             const plus = especial ? 5 : 0
             const dano = this.numAleatorio(min + plus, max + plus)
             this[player] = Math.max(this[player] - dano, 0)
+            this.registrarLog(`${origem} atingiu ${alvo} com ${dano}.`, classe)
         },
         ataque(especial){
-            this.dano('vidaJogador', 7, 12, false)
-            this.dano('vidaMonstro', 5, 10, especial)
+            this.dano('vidaMonstro', 5, 10, especial, 'jogador', 'monstro', 'player')
+            if(this.vidaMonstro > 0){
+                this.dano('vidaJogador', 7, 12, false, 'monstro', 'jogador', 'monster')
+            }
         },
         curar(){
             this.cura(9, 13)
@@ -33,6 +37,9 @@ new Vue({
         cura(min, max){
             const heal = this.numAleatorio(min, max)
             this.vidaJogador = Math.min(this.vidaJogador + heal, 100)
+        },
+        registrarLog(texto, classe){
+            this.logs.unshift( { texto, classe })
         }
     },
     computed: {
