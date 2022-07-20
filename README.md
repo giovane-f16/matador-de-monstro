@@ -1,3 +1,5 @@
-# Projeto Jogo: Matador de monstro
+# Jogo: Matador de monstro
 
-Estado: Em desenvolvimento. [Site](https://giovane-f16.github.io/matador-de-monstro/)
+Projeto desenvolvido utilizando Vue.js 2
+
+[Site](https://giovane-f16.github.io/matador-de-monstro/)
