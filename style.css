@@ -15,17 +15,24 @@ body{
 }
 #tela{
     display: flex;
-    justify-content: space-around;
+}
+.placar{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #barra-progresso-j, #barra-progresso-m{
     border: 1px solid black;
     height: 25px;
-    width: 500px;
+    width: 80%;
     margin-top: 10px;
 }
 .barra-j, .barra-m{
     height: 100%;
     background-color: rgb(3, 184, 3);
+    display: flex;
 }
 .danger{
     background-color: #ff0000;
@@ -93,6 +100,10 @@ body{
 }
 #lista ul{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
 }
 #lista ul li{
     margin: 10px 0px;
