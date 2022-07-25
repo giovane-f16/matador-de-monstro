@@ -3,6 +3,8 @@ body{
     text-align: center;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
+    background: rgb(209, 101, 101);
+background: linear-gradient(82deg, rgba(195,34,34,1) 1%, rgba(191,45,253,1) 100%);
 }
 #app{
     display: flex;
@@ -10,9 +12,10 @@ body{
 }
 .panel{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.329);
+    border-radius: 3px;
     margin: 10px;
     padding: 30px;
-    background-image: url("img/17973908.jpg");
+    background: rgb(224, 170, 245);
 }
 #tela{
     display: flex;
