@@ -124,3 +124,9 @@ background: linear-gradient(82deg, rgba(195,34,34,1) 1%, rgba(191,45,253,1) 100%
     background-color: #d62b2b;
     color: #fff;
 }
+@media only screen and(max-width: 500px){
+    #botoes{
+        display: flex;
+        flex-direction: column;
+    }
+}
