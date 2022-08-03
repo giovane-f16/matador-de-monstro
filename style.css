@@ -4,7 +4,7 @@ body{
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     background: rgb(209, 101, 101);
-background: linear-gradient(82deg, rgba(195,34,34,1) 1%, rgba(191,45,253,1) 100%);
+    background: linear-gradient(82deg, rgba(195,34,34,1) 1%, rgba(191,45,253,1) 100%);
 }
 #app{
     display: flex;
@@ -124,9 +124,12 @@ background: linear-gradient(82deg, rgba(195,34,34,1) 1%, rgba(191,45,253,1) 100%
     background-color: #d62b2b;
     color: #fff;
 }
-@media only screen and(max-width: 500px){
-    #botoes{
+@media(max-width: 845px){
+    #botoes button{
         display: flex;
+        width: 100%;
+        align-items: center;
         flex-direction: column;
+        margin-bottom: 10px;
     }
 }
