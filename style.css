@@ -112,7 +112,6 @@ body{
 #lista ul li{
     margin: 10px 0px;
     padding: 3px 0px;
-    line-height: bold;
     font-size: 24px;
     border-radius: 3px;
 }
@@ -131,5 +130,8 @@ body{
         align-items: center;
         flex-direction: column;
         margin-bottom: 10px;
+    }
+    #lista ul li{
+        font-size: 18px;
     }
 }
