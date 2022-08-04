@@ -48,7 +48,7 @@ body{
     align-items: center;
 }
 #iniciar{
-    font-size: 18px;
+    font-size: 22px;
     color: white;
     background-color: rgb(70, 70, 228);
     border: none;
@@ -62,8 +62,7 @@ body{
     background-color: rgb(44, 44, 185);
 }
 #botoesEscondidos button{
-    font-size: 14px;
-    line-height: bold;
+    font-size: 18px;
     margin: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -99,8 +98,7 @@ body{
     background-color: rgb(155, 155, 155);
 }
 #resultado{
-    font-size: 32px;
-    line-height: bold
+    font-size: 42px;
 }
 #lista ul{
     list-style: none;
@@ -131,7 +129,16 @@ body{
         flex-direction: column;
         margin-bottom: 10px;
     }
+    #botoesEscondidos button{
+        font-size: 16px;
+    }
     #lista ul li{
         font-size: 18px;
+    }
+    #iniciar{
+        font-size: 18px;
+    }
+    #resultado{
+        font-size: 32px;
     }
 }
